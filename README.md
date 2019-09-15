@@ -10,6 +10,8 @@ Work Assignment V
 ## Code Test execution
  - Execute following command from console to execute Tests and run App.main
  ```shell
+ $ git clone https://github.com/listellodavide/cryptocurrency-portfolio-calculator.git
+ $ cd cryptocurrency-portfolio-calculator
  $ mvn verifty
  ```
 ## License
