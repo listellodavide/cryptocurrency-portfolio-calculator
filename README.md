@@ -7,7 +7,7 @@ Work Assignment V
  - Code written in pure Java 8, only dependency JUnit 5.1.0
  - Required maven and java available on your $PATH
 
-## Code Test execution
+## Integration Tests and App code execution
  - Execute following command from console to execute Tests and run App.main
  ```shell
  $ git clone https://github.com/listellodavide/cryptocurrency-portfolio-calculator.git
