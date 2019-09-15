@@ -16,6 +16,10 @@ import java.util.Objects;
 
 /**
  * ServiceResponseEntry class represent json data parsed from the REST service response
+ * This data class hold information gathered from parsing the file and stored inside the CryptoCurrencyEntry and
+ * by querying the REST API webservice interface with an Http Client.
+ * This information were kept together to be able to compute the portfolio value of single currency based on the amount
+ * of coins invested and the overall total value of all digital coins at current EURO market value.
  * @since 1.0
  * @author davide.listello@gmail.com
  */
@@ -31,11 +35,15 @@ public class ServiceResponseEntry {
 
     private String errorMessage;
 
-    public ServiceResponseEntry(String digitalCurrencySymbol, String fiatCurrencySymbol, Double exchangeValue, String errorMessage) {
-        this.digitalCurrencySymbol = digitalCurrencySymbol;
-        this.fiatCurrencySymbol = fiatCurrencySymbol;
-        this.exchangeValue = exchangeValue;
-        this.errorMessage = errorMessage;
+    public ServiceResponseEntry() {
+
+    }
+
+    public ServiceResponseEntry(String digitalCurrencySymbol, String fiatCurrencySymbol, Double exchangeValue, String errorMessage) throws IllegalArgumentException{
+        setDigitalCurrencySymbol(digitalCurrencySymbol);
+        setFiatCurrencySymbol(fiatCurrencySymbol);
+        setExchangeValue(exchangeValue);
+        setErrorMessage(errorMessage);
     }
 
     public String getDigitalCurrencySymbol() {
@@ -43,15 +51,20 @@ public class ServiceResponseEntry {
     }
 
     public void setDigitalCurrencySymbol(String digitalCurrencySymbol) {
-        this.digitalCurrencySymbol = digitalCurrencySymbol;
+        if(digitalCurrencySymbol.length() >= 3 && digitalCurrencySymbol.length() <= 4)
+            this.digitalCurrencySymbol = digitalCurrencySymbol.toUpperCase();
+        else throw new IllegalArgumentException("digital currency symbol should be between 3 and 4 characters only! " +
+                "eg: BTC");
     }
 
     public String getFiatCurrencySymbol() {
         return fiatCurrencySymbol;
     }
 
-    public void setFiatCurrencySymbol(String fiatCurrencySymbol) {
-        this.fiatCurrencySymbol = fiatCurrencySymbol;
+    public void setFiatCurrencySymbol(String fiatCurrencySymbol) throws IllegalArgumentException {
+        if(fiatCurrencySymbol.length() == 3)
+            this.fiatCurrencySymbol = fiatCurrencySymbol.toUpperCase();
+        else throw new IllegalArgumentException("fiat currency symbol should be 3 characters only! eg: EUR");
     }
 
     public Double getExchangeValue() {
@@ -59,7 +72,10 @@ public class ServiceResponseEntry {
     }
 
     public void setExchangeValue(Double exchangeValue) {
-        this.exchangeValue = exchangeValue;
+        if(exchangeValue > 0.0d)
+            this.exchangeValue = exchangeValue;
+        else throw new IllegalArgumentException("The exchange value of a digital currency should never be 0.0 or " +
+                "negative. Something wrong happened, please retry again.");
     }
 
     public Double getQuantity() {
@@ -67,7 +83,9 @@ public class ServiceResponseEntry {
     }
 
     public void setQuantity(Double quantity) {
-        this.quantity = quantity;
+        if(quantity > 0.0d)
+            this.quantity = quantity;
+        else throw new IllegalArgumentException("quantity of coins should be bigger than 0.0 !");
     }
 
     public String getErrorMessage() {

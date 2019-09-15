@@ -28,8 +28,7 @@ public class JsonResponseParser implements ServiceParserStrategy {
     // match " or ' none " then positive lookahead : whitespace match true¦false¦digit¦a-zA-Z@()symbols
     // at least one or more lookahead , one or more groups true¦false¦digit¦a-zA-Z@()symbols "
     private final Pattern errorMessage = Pattern.compile("(?:\\\"|\\')([^\"]*)(?:\\\"|\\')(?=:)(?:\\:\\s*)(?:\\\")?" +
-            "(true|false|[-0-9]+[\\" +
-        ".]*[\\d]*(?=,)|[0-9a-zA-Z\\(\\)\\@\\:\\,\\/\\!\\+\\-\\.\\$\\ \\\\\\']*)(?:\\\")?");
+            "(true|false|[-0-9]+[\\.]*[\\d]*(?=,)|[0-9a-zA-Z\\(\\)\\@\\:\\,\\/\\!\\+\\-\\.\\$\\ \\\\\\']*)(?:\\\")?");
 
     // lookbehind "EUR": then match digit.digit
     // where . is optional and digit is at least 2 digit long
@@ -39,7 +38,9 @@ public class JsonResponseParser implements ServiceParserStrategy {
     }
 
     public ServiceResponseEntry parseServiceResponse(String input) throws ParseException {
-        ServiceResponseEntry parsedEntry = new ServiceResponseEntry("", "EUR", 0d,  "");
+        ServiceResponseEntry parsedEntry = new ServiceResponseEntry(); // empty object
+        parsedEntry.setErrorMessage("");             // placeholder
+        parsedEntry.setDigitalCurrencySymbol("XXX"); // placeholder symbol
         StringBuilder errorMessages = new StringBuilder();
         // check if input is a valid JSON object contained inside a { .. } before proceed to check the regexp match
         if(input.charAt(0) == '{' && input.charAt(input.length()-1) == '}') {
@@ -49,6 +50,7 @@ public class JsonResponseParser implements ServiceParserStrategy {
             boolean errorMessageFound = errorMessageMatcher.find();
             if (euroExchangeFound)
             {
+                parsedEntry.setFiatCurrencySymbol("EUR");
                 parsedEntry.setExchangeValue(Double.parseDouble(euroExchangeMatcher.group(0)));
             }
             else if(errorMessageFound) {

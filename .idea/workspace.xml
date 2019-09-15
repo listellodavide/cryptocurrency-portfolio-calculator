@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f60491aa-4f3d-464a-b636-9eafe03722aa" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/assignment/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/assignment/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/assignment/entry/CryptoCurrencyEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/assignment/entry/CryptoCurrencyEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/assignment/entry/ServiceResponseEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/assignment/entry/ServiceResponseEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/assignment/parser/JsonResponseParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/assignment/parser/JsonResponseParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ch/assignment/TestHttpWebClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ch/assignment/TestHttpWebClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ch/assignment/TestJsonResponseParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ch/assignment/TestJsonResponseParser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,76 +25,12 @@
     <favorites_list name="cryptocurrency-portfolio-calculator" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="HttpWebClientContext.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="37" column="50" lean-forward="true" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpWebClientStrategy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpWebClientManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/openjdk1.8.0_202.08/src.zip!/java/util/ArrayList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="432" selection-start-line="432" selection-end-line="432" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="ServiceResponseEntry.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/entry/ServiceResponseEntry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2185">
-              <caret line="109" column="95" selection-start-line="109" selection-start-column="95" selection-end-line="109" selection-end-column="95" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#2021#2022#0" expanded="true" />
-                <element signature="e#2052#2053#0" expanded="true" />
-                <element signature="e#2100#2101#0" expanded="true" />
-                <element signature="e#2140#2141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CryptoCurrencyEntry.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/entry/CryptoCurrencyEntry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="28" />
+            <state relative-caret-position="493">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -100,11 +38,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextFileParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/TextFileParser.java">
+      <file leaf-file-name="HttpWebClientManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="41" column="28" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="50" />
+            <state relative-caret-position="-474">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileParserContext.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/FileParserContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileParserStrategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/FileParserStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonResponseParser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/JsonResponseParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -116,8 +93,8 @@
       <file leaf-file-name="TestHttpWebClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestHttpWebClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="42" column="65" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="42" selection-end-column="65" />
+            <state relative-caret-position="-34">
+              <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -126,16 +103,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpWebClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClient.java">
+      <file leaf-file-name="TestCryptoCurrencyEntry.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestCryptoCurrencyEntry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="63" column="63" lean-forward="true" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+            <state relative-caret-position="-126">
+              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestJsonResponseParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestJsonResponseParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1504#1505#0" expanded="true" />
-                <element signature="e#1534#1535#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceResponseParserContext.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/ServiceResponseParserContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -144,8 +144,8 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
+            <state relative-caret-position="23">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -201,20 +201,22 @@
         <option value="$PROJECT_DIR$/src/main/java/ch/assignment/parser/ServiceResponseParserContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/ch/assignment/parser/ServiceParserStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/ch/assignment/parser/FileParserContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ch/assignment/entry/CryptoCurrencyEntry.java" />
         <option value="$PROJECT_DIR$/src/main/java/ch/assignment/parser/FileParserStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/ch/assignment/parser/TextFileParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ch/assignment/parser/JsonResponseParser.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ch/assignment/TestJsonResponseParser.java" />
         <option value="$PROJECT_DIR$/src/test/java/ch/assignment/TestTextFileParser.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientStrategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ch/assignment/entry/ServiceResponseEntry.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ch/assignment/TestHttpWebClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ch/assignment/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ch/assignment/TestCryptoCurrencyEntry.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ch/assignment/TestServiceResponseEntry.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ch/assignment/TestJsonResponseParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ch/assignment/entry/CryptoCurrencyEntry.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ch/assignment/TestHttpWebClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ch/assignment/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ch/assignment/entry/ServiceResponseEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ch/assignment/parser/JsonResponseParser.java" />
       </list>
     </option>
   </component>
@@ -246,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -340,7 +343,6 @@
       </pane>
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,7 +382,7 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="TestHttpWebClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCryptoCurrencyEntry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cryptocurrency-portfolio-calculator" />
       <extension name="coverage">
         <pattern>
@@ -391,12 +393,12 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ch.assignment" />
-      <option name="MAIN_CLASS_NAME" value="ch.assignment.TestHttpWebClient" />
-      <option name="METHOD_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ch.assignment.TestCryptoCurrencyEntry" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
@@ -438,11 +440,34 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ch.assignment" />
       <option name="MAIN_CLASS_NAME" value="ch.assignment.TestJsonResponseParser" />
-      <option name="METHOD_NAME" value="" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestTextFileParser.readCryptoCurrencyInputFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cryptocurrency-portfolio-calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.assignment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ch.assignment" />
+      <option name="MAIN_CLASS_NAME" value="ch.assignment.TestTextFileParser" />
+      <option name="METHOD_NAME" value="readCryptoCurrencyInputFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
@@ -514,16 +539,18 @@
     <list>
       <item itemvalue="Maven.test" />
       <item itemvalue="Application.App" />
-      <item itemvalue="JUnit.TestJsonResponseParser" />
-      <item itemvalue="JUnit.TestHttpWebClient" />
       <item itemvalue="JUnit.TestHttpWebClient.getResponseMarketExchangeValueCryptoCurrency" />
+      <item itemvalue="JUnit.TestTextFileParser.readCryptoCurrencyInputFile" />
+      <item itemvalue="JUnit.TestCryptoCurrencyEntry" />
+      <item itemvalue="JUnit.TestJsonResponseParser" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.TestHttpWebClient" />
-        <item itemvalue="JUnit.TestHttpWebClient.getResponseMarketExchangeValueCryptoCurrency" />
         <item itemvalue="JUnit.TestJsonResponseParser" />
+        <item itemvalue="JUnit.TestCryptoCurrencyEntry" />
+        <item itemvalue="JUnit.TestTextFileParser.readCryptoCurrencyInputFile" />
+        <item itemvalue="JUnit.TestHttpWebClient.getResponseMarketExchangeValueCryptoCurrency" />
       </list>
     </recent_temporary>
   </component>
@@ -547,93 +574,94 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568491366398</updated>
-      <workItem from="1568491370094" duration="16144000" />
+      <workItem from="1568491370094" duration="16471000" />
+      <workItem from="1568541511170" duration="8148000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestTextFileParser_readCryptoCurrencyInputFile - 2019.09.15 at 00h 12m 14s.xml">
+    <history-entry file="TestHttpWebClient_getResponseMarketExchangeFakeCryptoCurrency - 2019.09.15 at 13h 57m 27s.xml">
+      <configuration name="TestHttpWebClient.getResponseMarketExchangeFakeCryptoCurrency" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestHttpWebClient_getResponseMarketExchangeFakeCryptoCurrency - 2019.09.15 at 13h 59m 16s.xml">
+      <configuration name="TestHttpWebClient.getResponseMarketExchangeFakeCryptoCurrency" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestHttpWebClient_getResponseMarketExchangeValueCryptoCurrency - 2019.09.15 at 14h 00m 44s.xml">
+      <configuration name="TestHttpWebClient.getResponseMarketExchangeValueCryptoCurrency" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTextFileParser_readCryptoCurrencyInputFile - 2019.09.15 at 14h 01m 30s.xml">
       <configuration name="TestTextFileParser.readCryptoCurrencyInputFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTextFileParser_readCryptoCurrencyInputFile - 2019.09.15 at 00h 21m 41s.xml">
-      <configuration name="TestTextFileParser.readCryptoCurrencyInputFile" configurationId="JUnit" />
+    <history-entry file="TestCryptoCurrencyEntry - 2019.09.15 at 14h 01m 40s.xml">
+      <configuration name="TestCryptoCurrencyEntry" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTextFileParser_readCryptoCurrencyInputFile - 2019.09.15 at 00h 22m 23s.xml">
-      <configuration name="TestTextFileParser.readCryptoCurrencyInputFile" configurationId="JUnit" />
+    <history-entry file="TestJsonResponseParser - 2019.09.15 at 14h 01m 47s.xml">
+      <configuration name="TestJsonResponseParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestHttpWebClient - 2019.09.15 at 02h 01m 42s.xml">
-      <configuration name="TestHttpWebClient" configurationId="JUnit" />
+    <history-entry file="TestJsonResponseParser - 2019.09.15 at 14h 03m 24s.xml">
+      <configuration name="TestJsonResponseParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestHttpWebClient - 2019.09.15 at 02h 03m 07s.xml">
-      <configuration name="TestHttpWebClient" configurationId="JUnit" />
+    <history-entry file="TestJsonResponseParser - 2019.09.15 at 14h 03m 41s.xml">
+      <configuration name="TestJsonResponseParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestHttpWebClient - 2019.09.15 at 02h 11m 00s.xml">
-      <configuration name="TestHttpWebClient" configurationId="JUnit" />
+    <history-entry file="TestJsonResponseParser - 2019.09.15 at 14h 07m 42s.xml">
+      <configuration name="TestJsonResponseParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestHttpWebClient - 2019.09.15 at 02h 19m 18s.xml">
-      <configuration name="TestHttpWebClient" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestHttpWebClient - 2019.09.15 at 02h 21m 10s.xml">
-      <configuration name="TestHttpWebClient" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestHttpWebClient - 2019.09.15 at 02h 23m 57s.xml">
-      <configuration name="TestHttpWebClient" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestHttpWebClient - 2019.09.15 at 02h 24m 09s.xml">
-      <configuration name="TestHttpWebClient" configurationId="JUnit" />
+    <history-entry file="TestJsonResponseParser - 2019.09.15 at 14h 10m 25s.xml">
+      <configuration name="TestJsonResponseParser" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16144000" />
+    <option name="totallyTimeSpent" value="24619000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.32938388" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32938388" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.44194314" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7534517" visible="true" weight="0.2460457" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32938388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" sideWeight="0.24654832" side_tool="true" weight="0.2460457" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" sideWeight="0.24654832" side_tool="true" weight="0.2460457" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3992891" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.44194314" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.7534517" visible="true" weight="0.2460457" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="11" />
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32938388" />
       <window_info anchor="right" id="Database" order="3" />
@@ -641,10 +669,10 @@
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="8" visible="true" weight="0.3992891" />
       <window_info id="Capture Tool" order="3" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Messages" order="4" weight="0.32938388" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info id="Favorites" order="4" sideWeight="0.24654832" side_tool="true" visible="true" weight="0.2460457" />
@@ -665,32 +693,34 @@
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientManager.java</url>
-          <line>61</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ch/assignment/TestHttpWebClient.java</url>
+          <line>80</line>
           <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientManager.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClient.java</url>
-          <line>61</line>
-          <properties />
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="digitalCurrencySymbol.length()" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>digitalCurrencySymbol.length()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestJsonResponseParser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="23" selection-start-line="23" selection-end-line="27" selection-end-column="3" />
+        <state relative-caret-position="437">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -698,10 +728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestTextFileParser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+        <state relative-caret-position="667">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -709,10 +739,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/ServiceResponseParserContext.java">
+    <entry file="jar://C:/Program Files/Java/openjdk1.8.0_202.08/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        <state relative-caret-position="9936">
+          <caret line="432" selection-start-line="432" selection-end-line="432" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/entry/ServiceResponseEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2507">
+          <caret line="109" column="95" selection-start-line="109" selection-start-column="95" selection-end-line="109" selection-end-column="95" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/entry/CryptoCurrencyEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/TextFileParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="50" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -720,10 +777,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestHttpWebClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="51" column="56" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="56" />
+        <state relative-caret-position="966">
+          <caret line="42" column="65" selection-start-line="41" selection-start-column="7" selection-end-line="42" selection-end-column="65" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="63" column="63" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1357">
+          <caret line="59" column="74" selection-start-line="59" selection-start-column="74" selection-end-line="59" selection-end-column="74" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -738,21 +834,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/FileParserContext.java">
+    <entry file="jar://C:/Program Files/Java/openjdk1.8.0_202.08/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="19" selection-start-line="19" selection-end-line="24" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="9062">
+          <caret line="432" selection-start-line="432" selection-end-line="432" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/FileParserStrategy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="20" column="55" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="55" />
+        <state relative-caret-position="589">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -762,54 +854,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/ServiceParserStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="552">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/JsonResponseParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-497">
-          <caret line="22" column="96" selection-start-line="22" selection-start-column="96" selection-end-line="22" selection-end-column="96" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/entry/CryptoCurrencyEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/entry/ServiceResponseEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2185">
-          <caret line="109" column="95" selection-start-line="109" selection-start-column="95" selection-end-line="109" selection-end-column="95" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#2021#2022#0" expanded="true" />
-            <element signature="e#2052#2053#0" expanded="true" />
-            <element signature="e#2100#2101#0" expanded="true" />
-            <element signature="e#2140#2141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/openjdk1.8.0_202.08/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="432" selection-start-line="432" selection-end-line="432" />
         </state>
       </provider>
     </entry>
@@ -824,10 +874,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="51" column="56" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/entry/CryptoCurrencyEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="37" column="50" lean-forward="true" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        <state relative-caret-position="170">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -835,10 +902,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientStrategy.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestTextFileParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        <state relative-caret-position="-83">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -846,23 +913,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestHttpWebClient.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestServiceResponseEntry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="42" column="65" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="42" selection-end-column="65" />
+        <state relative-caret-position="170">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -870,8 +925,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="63" column="63" lean-forward="true" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+        <state relative-caret-position="-971">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -881,10 +936,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/entry/ServiceResponseEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/http/HttpWebClientManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        <state relative-caret-position="-474">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/ServiceResponseParserContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestHttpWebClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestJsonResponseParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ch/assignment/TestCryptoCurrencyEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/FileParserContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/FileParserStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ch/assignment/parser/JsonResponseParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />

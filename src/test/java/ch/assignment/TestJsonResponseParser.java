@@ -28,7 +28,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 public class TestJsonResponseParser {
 
-    private static String jsonErrorMsgString = "{\"Response\":\"Error\",\"Message\":\"There is no data for the symbol BTCCC .\",\"HasWarning\":false,\"Type\":2,\"RateLimit\":{},\"Data\":{},\"ParamWithError\":\"fsym\"}";
+    private static String jsonErrorMsgString = "{\"Response\":\"Error\",\"Message\":\"There is no data for the symbol" +
+            " ABBA .\",\"HasWarning\":false,\"Type\":2,\"RateLimit\":{},\"Data\":{},\"ParamWithError\":\"fsym\"}";
 
     private static String jsonExchangeString = "{\"EUR\":9316.4}";
 

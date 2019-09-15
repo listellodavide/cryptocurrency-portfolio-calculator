@@ -24,8 +24,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * App class that parse input arguments and call Digital Currency Portfolio Calculator

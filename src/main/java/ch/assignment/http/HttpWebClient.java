@@ -46,14 +46,26 @@ public class HttpWebClient implements Callable<String> {
         return getRequestResponse();
     }
 
+    /**
+     * Return the JSON as string from the Http Rest API webservice
+     * Limitations: at the moment support only GET method and only the URI set at the time of object creation.
+     *
+     * There are no params involved because the URI is set once we instantiate the HttpClient object
+     * This is because HttpWebClient implement the Callable<T> interface for Future Async Task
+     *  @return      the retrieved JSON as String from the Http Rest API webservice
+     *
+     */
     public String getRequestResponse(){
         URL url;
         String response = "";
 
         try {
-            // Request modeled to be seen as a Chrome browser User-Agent with the same cookie set on the page requested
-            // for more details also check API docs
-            // https://min-api.cryptocompare.com/documentation?key=Price&cat=SingleSymbolPriceEndpoint
+            /*
+            * HTTP-headers:
+            * User-Agent    Set to match a Windows 10 Chrome v.74 web browser
+            * Cookie        Set to match the one set on the browser when calling the Rest API (not strictly required)
+            * @link         https://min-api.cryptocompare.com/documentation?key=Price&cat=SingleSymbolPriceEndpoint
+            */
             url = new URL(this.uri);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");

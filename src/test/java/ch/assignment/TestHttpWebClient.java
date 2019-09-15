@@ -71,8 +71,8 @@ public class TestHttpWebClient {
     void getResponseMarketExchangeFakeCryptoCurrency() throws InterruptedException {
         List<CryptoCurrencyEntry> inputs = Arrays.asList(
                 new CryptoCurrencyEntry("ABBA", 10d),
-                new CryptoCurrencyEntry("BTCCCC",5.24d),
-                new CryptoCurrencyEntry("SLURP", 2000.24d),
+                new CryptoCurrencyEntry("BXC",5.24d),
+                new CryptoCurrencyEntry("ZIP", 2000.24d),
                 new CryptoCurrencyEntry("APPL", 1925.24d),
                 new CryptoCurrencyEntry("DELL",106580.856689d));
         ArrayList<ServiceResponseEntry> serviceResponseEntryArrayList = ctx
@@ -93,9 +93,9 @@ public class TestHttpWebClient {
         List<CryptoCurrencyEntry> inputs = Arrays.asList(
                 new CryptoCurrencyEntry("ABBA", 10d),
                 new CryptoCurrencyEntry("BTC",5.24d),
-                new CryptoCurrencyEntry("BTCCCC", 2000.24d),
+                new CryptoCurrencyEntry("BTC", 2000.24d),
                 new CryptoCurrencyEntry("ETH", 1925.24d),
-                new CryptoCurrencyEntry("SLURP", 10d),
+                new CryptoCurrencyEntry("ZIP", 10d),
                 new CryptoCurrencyEntry("XRP",5.24d),
                 new CryptoCurrencyEntry("APPL", 2000.24d),
                 new CryptoCurrencyEntry("TRX", 1925.24d),

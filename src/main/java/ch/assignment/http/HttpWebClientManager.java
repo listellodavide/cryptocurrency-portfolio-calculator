@@ -34,6 +34,22 @@ import java.util.concurrent.TimeUnit;
  */
 public class HttpWebClientManager implements HttpWebClientStrategy {
 
+    /**
+     * Return an ArrayList of ServiceResponseEntry that can be used to
+     * calculate the actual value based on the quantity of Digital Currency
+     * currently acquired by the investor in his investment portfolio
+     * Current value is based on Exchange https://min-api.cryptocompare.com where
+     * The Index price for a currency pair is the weighted average of prices on all exchanges currently listed.
+     * See documentation link below for more details.
+     * @link https://www.cryptocompare.com/media/27010937/cccagg_methodology_2018-02-26.pdf
+     *
+     * @param  digitalCurrencySymbolsArray   the list of currency and quantity currently acquired in the portfolio
+     * @param  fiatCurrencySymbol            the fiat currency like USD, EUR, etc. to convert at current market value
+     *                                      our digital currency
+     * @return      the list of {digital-currency, fiat-currency, quantity, exchange-price} retrieved from input + REST
+     *              API call
+     * @see         ServiceResponseEntry
+     */
     @Override
     public ArrayList<ServiceResponseEntry>
     requestRestInterfaceActualValueCurrencySymbols(@NotNull List<CryptoCurrencyEntry> digitalCurrencySymbolsArray,
