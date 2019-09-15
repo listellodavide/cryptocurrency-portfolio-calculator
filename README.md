@@ -2,7 +2,7 @@
 
 Work Assignment V
 
-## Build
+## Project Requirements
 
  - Code written in pure Java 8, only dependency JUnit 5.1.0
  - Required maven and java available on your $PATH
