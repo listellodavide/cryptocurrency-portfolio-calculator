@@ -9,8 +9,9 @@ Work Assignment V
 
 ## Code Test execution
  - Execute following command from console to execute Tests and run App.main
- - mvn verifty
-
+ ```shell
+ $ mvn verifty
+ ```
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
