@@ -12,10 +12,12 @@
  */
 package ch.assignment.http;
 
+import ch.assignment.entry.CryptoCurrencyEntry;
 import ch.assignment.entry.ServiceResponseEntry;
 import com.sun.istack.internal.NotNull;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * HttpWebClientStrategy class follow the Strategy Pattern where HttpWebClientStrategy is the interface for the API
@@ -25,7 +27,7 @@ import java.util.ArrayList;
 public interface HttpWebClientStrategy {
 
     public ArrayList<ServiceResponseEntry>
-    requestRestInterfaceActualValueCurrencySymbols(@NotNull String[] digitalCurrencySymbolsArray,
+    requestRestInterfaceActualValueCurrencySymbols(@NotNull List<CryptoCurrencyEntry> digitalCurrencySymbolsArray,
                                                    String fiatCurrencySymbol) throws InterruptedException;
 
 }

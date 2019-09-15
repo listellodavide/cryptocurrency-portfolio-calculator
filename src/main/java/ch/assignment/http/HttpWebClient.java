@@ -51,9 +51,14 @@ public class HttpWebClient implements Callable<String> {
         String response = "";
 
         try {
+            // Request modeled to be seen as a Chrome browser User-Agent with the same cookie set on the page requested
+            // for more details also check API docs
+            // https://min-api.cryptocompare.com/documentation?key=Price&cat=SingleSymbolPriceEndpoint
             url = new URL(this.uri);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
+            con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36");
+            con.setRequestProperty("Cookie", "__cfduid=d21121d3aed99cd5fab8102a417d3e18c1568407546; ");
             response = HttpWebClient.getRawResponse(con, false); // false = no headers are appended to response
 
         } catch (MalformedURLException | ProtocolException e) {

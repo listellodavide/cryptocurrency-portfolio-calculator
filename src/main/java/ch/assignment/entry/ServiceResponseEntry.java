@@ -27,6 +27,8 @@ public class ServiceResponseEntry {
 
     private Double exchangeValue;
 
+    private Double quantity;
+
     private String errorMessage;
 
     public ServiceResponseEntry(String digitalCurrencySymbol, String fiatCurrencySymbol, Double exchangeValue, String errorMessage) {
@@ -60,6 +62,14 @@ public class ServiceResponseEntry {
         this.exchangeValue = exchangeValue;
     }
 
+    public Double getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Double quantity) {
+        this.quantity = quantity;
+    }
+
     public String getErrorMessage() {
         return errorMessage;
     }
@@ -75,6 +85,7 @@ public class ServiceResponseEntry {
         sb.append("digitalCurrencySymbol=\"" + digitalCurrencySymbol + "\",");
         sb.append("fiatCurrencySymbol=\"" + fiatCurrencySymbol + "\",");
         sb.append("exchangeValue=\"" + exchangeValue + "\"");
+        sb.append("quantity=\"" + quantity + "\"");
         if(!errorMessage.isEmpty()) {
             sb.append(",errorMessage=\"" + errorMessage + '\"');
         }
@@ -90,11 +101,12 @@ public class ServiceResponseEntry {
         return Objects.equals(digitalCurrencySymbol, that.digitalCurrencySymbol) &&
                 Objects.equals(fiatCurrencySymbol, that.fiatCurrencySymbol) &&
                 Objects.equals(exchangeValue, that.exchangeValue) &&
+                Objects.equals(quantity, that.quantity) &&
                 Objects.equals(errorMessage, that.errorMessage);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(digitalCurrencySymbol, fiatCurrencySymbol, exchangeValue, errorMessage);
+        return Objects.hash(digitalCurrencySymbol, fiatCurrencySymbol, exchangeValue, quantity, errorMessage);
     }
 }

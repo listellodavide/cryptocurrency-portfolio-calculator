@@ -12,12 +12,14 @@
  */
 package ch.assignment.http;
 
+import ch.assignment.entry.CryptoCurrencyEntry;
 import ch.assignment.entry.ServiceResponseEntry;
 import ch.assignment.parser.JsonResponseParser;
 import ch.assignment.parser.ServiceResponseParserContext;
 import com.sun.istack.internal.NotNull;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -32,28 +34,33 @@ import java.util.concurrent.TimeUnit;
  */
 public class HttpWebClientManager implements HttpWebClientStrategy {
 
+    @Override
     public ArrayList<ServiceResponseEntry>
-    requestRestInterfaceActualValueCurrencySymbols(@NotNull String[] digitalCurrencySymbolsArray,
+    requestRestInterfaceActualValueCurrencySymbols(@NotNull List<CryptoCurrencyEntry> digitalCurrencySymbolsArray,
                                                    String fiatCurrencySymbol) throws InterruptedException {
 
         int cpuCoresCount = Runtime.getRuntime().availableProcessors();
         ExecutorService executorService = Executors.newFixedThreadPool(cpuCoresCount);
-        Future<String>[] results = new Future[digitalCurrencySymbolsArray.length];
+
+        Future<String>[] results = new Future[digitalCurrencySymbolsArray.size()];
 
         ServiceResponseParserContext ctx = new ServiceResponseParserContext();
         ctx.setServiceResponseParserStrategy(new JsonResponseParser());
         ArrayList<ServiceResponseEntry> serviceResponseEntryArrayList = new ArrayList();
-        for (int i = 0; i < digitalCurrencySymbolsArray.length; i++) {
+        for (int i = 0; i < digitalCurrencySymbolsArray.size(); i++) {
             results[i] = executorService.submit(new HttpWebClient("https://min-api.cryptocompare" +
-                    ".com/data/price?fsym="+digitalCurrencySymbolsArray[i]+"&tsyms="+fiatCurrencySymbol.toUpperCase()));
+                    ".com/data/price?fsym="+digitalCurrencySymbolsArray.get(i).getDigitalCurrencySymbol()+"&tsyms="+fiatCurrencySymbol
+                    .toUpperCase
+                    ()));
         }
 
-        for (int i = 0; i < digitalCurrencySymbolsArray.length; i++) {
+        for (int i = 0; i < digitalCurrencySymbolsArray.size(); i++) {
             try {
                 String response = results[i].get(30, TimeUnit.SECONDS);
-                System.out.println("HttpClient Response: " + response);
+                // System.out.println("HttpClient Response: " + response);
                 ServiceResponseEntry entry = ctx.parseServiceResponse(response);
-                entry.setDigitalCurrencySymbol(digitalCurrencySymbolsArray[i]);
+                entry.setDigitalCurrencySymbol(digitalCurrencySymbolsArray.get(i).getDigitalCurrencySymbol());
+                entry.setQuantity(digitalCurrencySymbolsArray.get(i).getQuantity());
                 serviceResponseEntryArrayList.add(entry);
             } catch (Exception e) {
                 // interrupts if there is any possible error

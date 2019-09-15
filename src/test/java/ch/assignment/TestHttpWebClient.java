@@ -12,6 +12,7 @@
  */
 package ch.assignment;
 
+import ch.assignment.entry.CryptoCurrencyEntry;
 import ch.assignment.entry.ServiceResponseEntry;
 import ch.assignment.http.HttpWebClientContext;
 import ch.assignment.http.HttpWebClientManager;
@@ -19,6 +20,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,13 +45,19 @@ public class TestHttpWebClient {
 
     @Test
     void getResponseMarketExchangeValueCryptoCurrency() throws InterruptedException {
-        String[] inputs = { "BTC", "ETH", "XRP", "TRX", "XMR" };
+        List<CryptoCurrencyEntry> inputs = Arrays.asList(
+                new CryptoCurrencyEntry("BTC", 10d),
+                new CryptoCurrencyEntry("ETH",5.24d),
+                new CryptoCurrencyEntry("XRP", 2000.24d),
+                new CryptoCurrencyEntry("TRX", 1925.24d),
+                new CryptoCurrencyEntry("XMR",106580.856689d));
         ArrayList<ServiceResponseEntry> serviceResponseEntryArrayList = ctx
                 .requestRestInterfaceActualValueCurrencySymbols(inputs, "EUR");
 
         double epsDelta = 0.33d; // delta eps precision I expect a +/-33% value change over time because of high
         // volatility in the currency market to allow me to pass the test even when a change happen on crypto exchanges
 
+        assertEquals(serviceResponseEntryArrayList.size(), 5);
         assertAll("Crypto-Currency Exchange response digital currency value in 33% range validation",
                 () -> assertEquals(serviceResponseEntryArrayList.get(0).getExchangeValue(), 9380.18d, (9380.18d*epsDelta)),
                 () -> assertEquals(serviceResponseEntryArrayList.get(1).getExchangeValue(), 169.46d, (169.46d*epsDelta)),
@@ -61,10 +69,16 @@ public class TestHttpWebClient {
 
     @Test
     void getResponseMarketExchangeFakeCryptoCurrency() throws InterruptedException {
-        String[] inputs = { "ABBA", "BTCCCC", "SLURP", "APPL", "DELL" };
+        List<CryptoCurrencyEntry> inputs = Arrays.asList(
+                new CryptoCurrencyEntry("ABBA", 10d),
+                new CryptoCurrencyEntry("BTCCCC",5.24d),
+                new CryptoCurrencyEntry("SLURP", 2000.24d),
+                new CryptoCurrencyEntry("APPL", 1925.24d),
+                new CryptoCurrencyEntry("DELL",106580.856689d));
         ArrayList<ServiceResponseEntry> serviceResponseEntryArrayList = ctx
                 .requestRestInterfaceActualValueCurrencySymbols(inputs, "EUR");
 
+        assertEquals(serviceResponseEntryArrayList.size(), 5);
         assertAll("Crypto-Currency Exchange response error message validation",
                 () -> assertTrue(serviceResponseEntryArrayList.get(0).getErrorMessage().length() > 0),
                 () -> assertTrue(serviceResponseEntryArrayList.get(1).getErrorMessage().length() > 0),
@@ -76,7 +90,17 @@ public class TestHttpWebClient {
 
     @Test
     void getResponseMarketExchangeRealAndFakeCryptoCurrency() throws InterruptedException {
-        String[] inputs = { "ABBA", "BTC", "BTCCCC", "ETH", "SLURP", "XRP", "APPL", "TRX", "DELL", "XMR" };
+        List<CryptoCurrencyEntry> inputs = Arrays.asList(
+                new CryptoCurrencyEntry("ABBA", 10d),
+                new CryptoCurrencyEntry("BTC",5.24d),
+                new CryptoCurrencyEntry("BTCCCC", 2000.24d),
+                new CryptoCurrencyEntry("ETH", 1925.24d),
+                new CryptoCurrencyEntry("SLURP", 10d),
+                new CryptoCurrencyEntry("XRP",5.24d),
+                new CryptoCurrencyEntry("APPL", 2000.24d),
+                new CryptoCurrencyEntry("TRX", 1925.24d),
+                new CryptoCurrencyEntry("DELL",106580.856689d),
+                new CryptoCurrencyEntry("XMR",106580.856689d));
         ArrayList<ServiceResponseEntry> serviceResponseEntryArrayList = ctx
                         .requestRestInterfaceActualValueCurrencySymbols(inputs, "EUR");
 
@@ -87,6 +111,7 @@ public class TestHttpWebClient {
                 .filter(entry -> entry.getErrorMessage().length() == 0)
                 .collect(Collectors.toList());
 
+        assertEquals(validCurrencyServiceResponses.size(), 5);
         assertAll("Crypto-Currency Exchange response digital currency value in 33% range validation",
                 () -> assertEquals(validCurrencyServiceResponses.get(0).getExchangeValue(), 9380.18d, (9380.18d*epsDelta)),
                 () -> assertEquals(validCurrencyServiceResponses.get(1).getExchangeValue(), 169.46d, (169.46d*epsDelta)),

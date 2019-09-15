@@ -12,10 +12,12 @@
  */
 package ch.assignment.http;
 
+import ch.assignment.entry.CryptoCurrencyEntry;
 import ch.assignment.entry.ServiceResponseEntry;
 import com.sun.istack.internal.NotNull;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * HttpWebClientContext class follow the Strategy Pattern where HttpWebClientContext allow clients to
@@ -31,7 +33,7 @@ public class HttpWebClientContext implements HttpWebClientStrategy {
     }
 
     public ArrayList<ServiceResponseEntry>
-    requestRestInterfaceActualValueCurrencySymbols(@NotNull String[] digitalCurrencySymbolsArray,
+    requestRestInterfaceActualValueCurrencySymbols(@NotNull List<CryptoCurrencyEntry> digitalCurrencySymbolsArray,
                                                    String fiatCurrencySymbol) throws InterruptedException {
         return httpClient.requestRestInterfaceActualValueCurrencySymbols(digitalCurrencySymbolsArray,
                 fiatCurrencySymbol);

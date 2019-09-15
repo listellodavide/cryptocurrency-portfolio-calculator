@@ -13,13 +13,19 @@
 package ch.assignment;
 
 import ch.assignment.entry.CryptoCurrencyEntry;
+import ch.assignment.entry.ServiceResponseEntry;
+import ch.assignment.http.HttpWebClientContext;
+import ch.assignment.http.HttpWebClientManager;
 import ch.assignment.parser.FileParserContext;
 import ch.assignment.parser.TextFileParser;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * App class that parse input arguments and call Digital Currency Portfolio Calculator
@@ -27,15 +33,15 @@ import java.util.List;
  * @author davide.listello@gmail.com
  */
 public class App {
+    private double portfolioTotalValueInEuro = 0.0d;
+
     public static void main(String[] args) throws InterruptedException {
+        App app = new App();
         Path filepath;
         if (args.length > 0) {
             try {
                 filepath = Paths.get(args[0]);
-                FileParserContext ctx = new FileParserContext();
-                ctx.setInputParserStrategy(new TextFileParser());
-                List<CryptoCurrencyEntry> entries = ctx.parseCryptoCurrencyInputFile(filepath);
-                System.out.println(entries);
+                app.calculatePortfolioValue(filepath);
 
             } catch (InputMismatchException e) {
                 System.err.println("Argument" + args[0] + " must be a valid file path. eg: C:\\bobs_crypto.txt");
@@ -47,5 +53,31 @@ public class App {
         }
     }
 
+    private void calculatePortfolioValue(Path filepath) throws InterruptedException {
+        FileParserContext fileParserContext = new FileParserContext();
+        fileParserContext.setInputParserStrategy(new TextFileParser());
+        List<CryptoCurrencyEntry> entries = fileParserContext.parseCryptoCurrencyInputFile(filepath);
+        HttpWebClientContext httpWebClientContext = new HttpWebClientContext();
+        httpWebClientContext.setHttpWebClientStrategy(new HttpWebClientManager());
+        ArrayList<ServiceResponseEntry> serviceResponseEntryArrayList = httpWebClientContext
+                .requestRestInterfaceActualValueCurrencySymbols(entries, "EUR");
+
+        serviceResponseEntryArrayList.forEach(entry -> {
+            System.out.println(String.format("The actual value of 1 %s in exchange is %.2f %s. In the portfolio " +
+                            "there are %.2f %s so total value is %.2f %s",
+                    entry.getDigitalCurrencySymbol(),
+                    entry.getExchangeValue(),
+                    entry.getFiatCurrencySymbol(),
+                    entry.getQuantity(),
+                    entry.getDigitalCurrencySymbol(),
+                    (entry.getExchangeValue()*entry.getQuantity()),
+                    entry.getFiatCurrencySymbol()));
+            this.portfolioTotalValueInEuro += (entry.getExchangeValue()*entry.getQuantity());
+        });
+
+        System.out.println(String.format("The overall portfolio total value is %.2f EUR", this
+                .portfolioTotalValueInEuro));
+
+    }
 
 }
