@@ -19,9 +19,11 @@ import ch.assignment.http.HttpWebClientManager;
 import ch.assignment.parser.FileParserContext;
 import ch.assignment.parser.TextFileParser;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 
@@ -35,29 +37,40 @@ public class App {
 
     public static void main(String[] args) throws InterruptedException {
         App app = new App();
-        Path filepath;
+        Path inputFullpath;
+        File currentDir = new File("./");
+        System.out.println("Current directory location on disk: " + currentDir.getAbsolutePath());
         if (args.length > 0) {
             try {
-                filepath = Paths.get(args[0]);
-                app.calculatePortfolioValue(filepath);
-
+                inputFullpath = currentDir.toPath().resolve(Paths.get(args[0]));
+                System.out.println("Given input file digital currency portfolio location: " + inputFullpath.toString());
+                System.out.println("Calculating portfolio value by processing input and calling REST API..Please wait..");
+                app.calculatePortfolioValue(inputFullpath);
+            } catch ( IOException e) {
+                    e.printStackTrace();
+                    System.err.println("Unable to open given file path: "+ currentDir.toString() + args[0] +
+                            ". Please check if the given relative path to input file exist.");
+                    System.exit(1);
             } catch (InputMismatchException e) {
-                System.err.println("Argument" + args[0] + " must be a valid file path. eg: C:\\bobs_crypto.txt");
+                e.printStackTrace();
+                System.err.println("Argument"+ currentDir.toString() + args[0] +" must be a valid relative file path." +
+                        " eg: src\\test\\resources\\bobs_crypto.txt");
                 System.exit(1);
             }
+
         }
         else {
-            System.out.println("usage: [FILE] \n eg: C:\\bobs_crypto.txt");
+            System.out.println("usage: [FILE] \n eg: src\\test\\resources\\bobs_crypto.txt");
         }
     }
 
-    private void calculatePortfolioValue(Path filepath) throws InterruptedException {
+    private void calculatePortfolioValue(Path filepath) throws InterruptedException, MalformedURLException {
         FileParserContext fileParserContext = new FileParserContext();
         fileParserContext.setInputParserStrategy(new TextFileParser());
         List<CryptoCurrencyEntry> entries = fileParserContext.parseCryptoCurrencyInputFile(filepath);
         HttpWebClientContext httpWebClientContext = new HttpWebClientContext();
         httpWebClientContext.setHttpWebClientStrategy(new HttpWebClientManager());
-        ArrayList<ServiceResponseEntry> serviceResponseEntryArrayList = httpWebClientContext
+        List<ServiceResponseEntry> serviceResponseEntryArrayList = httpWebClientContext
                 .requestRestInterfaceActualValueCurrencySymbols(entries, "EUR");
 
         serviceResponseEntryArrayList.forEach(entry -> {

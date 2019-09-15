@@ -16,14 +16,15 @@ import ch.assignment.entry.CryptoCurrencyEntry;
 import ch.assignment.entry.ServiceResponseEntry;
 import ch.assignment.parser.JsonResponseParser;
 import ch.assignment.parser.ServiceResponseParserContext;
-import com.sun.istack.internal.NotNull;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * HttpWebClientManager class follow the Strategy Pattern where HttpWebClientManager is an implementation of the
@@ -51,9 +52,9 @@ public class HttpWebClientManager implements HttpWebClientStrategy {
      * @see         ServiceResponseEntry
      */
     @Override
-    public ArrayList<ServiceResponseEntry>
-    requestRestInterfaceActualValueCurrencySymbols(@NotNull List<CryptoCurrencyEntry> digitalCurrencySymbolsArray,
-                                                   String fiatCurrencySymbol) throws InterruptedException {
+    public List<ServiceResponseEntry>
+    requestRestInterfaceActualValueCurrencySymbols(List<CryptoCurrencyEntry> digitalCurrencySymbolsArray,
+                                                   String fiatCurrencySymbol) throws InterruptedException, MalformedURLException {
 
         int cpuCoresCount = Runtime.getRuntime().availableProcessors();
         ExecutorService executorService = Executors.newFixedThreadPool(cpuCoresCount);
@@ -68,9 +69,6 @@ public class HttpWebClientManager implements HttpWebClientStrategy {
                     ".com/data/price?fsym="+digitalCurrencySymbolsArray.get(i).getDigitalCurrencySymbol()+"&tsyms="+fiatCurrencySymbol
                     .toUpperCase
                     ()));
-        }
-
-        for (int i = 0; i < digitalCurrencySymbolsArray.size(); i++) {
             try {
                 String response = results[i].get(30, TimeUnit.SECONDS);
                 // System.out.println("HttpClient Response: " + response);
@@ -86,6 +84,11 @@ public class HttpWebClientManager implements HttpWebClientStrategy {
 
         executorService.shutdown();
         executorService.awaitTermination(10, TimeUnit.SECONDS);
-        return serviceResponseEntryArrayList;
+
+        List<ServiceResponseEntry> validCurrencyServiceResponses = serviceResponseEntryArrayList.stream()
+                .filter(entry -> entry.getErrorMessage().isEmpty())
+                .collect(Collectors.toList());
+
+        return validCurrencyServiceResponses;
     }
 }

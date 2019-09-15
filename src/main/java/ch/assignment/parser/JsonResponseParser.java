@@ -38,12 +38,11 @@ public class JsonResponseParser implements ServiceParserStrategy {
     }
 
     public ServiceResponseEntry parseServiceResponse(String input) throws ParseException {
-        ServiceResponseEntry parsedEntry = new ServiceResponseEntry(); // empty object
-        parsedEntry.setErrorMessage("");             // placeholder
-        parsedEntry.setDigitalCurrencySymbol("XXX"); // placeholder symbol
+        // empty object with placeholder values
+        ServiceResponseEntry parsedEntry = new ServiceResponseEntry("XXX", "EUR", 0.001d, "");
         StringBuilder errorMessages = new StringBuilder();
         // check if input is a valid JSON object contained inside a { .. } before proceed to check the regexp match
-        if(input.charAt(0) == '{' && input.charAt(input.length()-1) == '}') {
+        if(input.charAt(0) == '{' && input.charAt(input.length()-1) == '}' && input.length() > 2) {
             Matcher euroExchangeMatcher = euroExchange.matcher(input);
             boolean euroExchangeFound = euroExchangeMatcher.find();
             Matcher errorMessageMatcher = errorMessage.matcher(input);
@@ -59,7 +58,10 @@ public class JsonResponseParser implements ServiceParserStrategy {
                 }
             }
         }
-        else throw new ParseException("Malformed input string is not a JSON serialized object", 0);
+        else if(input.compareTo("{}") == 0) {
+            throw new ParseException("Malformed input string, found an empty {} JSON object!", 0);
+        } else throw new ParseException("Malformed input string, given "+input+" is not valid JSON object!", 0);
+
         if(errorMessages.length() > 0)
             parsedEntry.setErrorMessage(errorMessages.toString());
         return parsedEntry;

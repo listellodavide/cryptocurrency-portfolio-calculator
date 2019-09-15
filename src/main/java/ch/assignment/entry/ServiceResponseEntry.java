@@ -35,15 +35,11 @@ public class ServiceResponseEntry {
 
     private String errorMessage;
 
-    public ServiceResponseEntry() {
-
-    }
-
     public ServiceResponseEntry(String digitalCurrencySymbol, String fiatCurrencySymbol, Double exchangeValue, String errorMessage) throws IllegalArgumentException{
         setDigitalCurrencySymbol(digitalCurrencySymbol);
         setFiatCurrencySymbol(fiatCurrencySymbol);
         setExchangeValue(exchangeValue);
-        setErrorMessage(errorMessage);
+        this.errorMessage = errorMessage;
     }
 
     public String getDigitalCurrencySymbol() {

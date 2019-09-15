@@ -14,8 +14,8 @@ package ch.assignment.http;
 
 import ch.assignment.entry.CryptoCurrencyEntry;
 import ch.assignment.entry.ServiceResponseEntry;
-import com.sun.istack.internal.NotNull;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,9 +32,9 @@ public class HttpWebClientContext implements HttpWebClientStrategy {
         this.httpClient = httpClient;
     }
 
-    public ArrayList<ServiceResponseEntry>
-    requestRestInterfaceActualValueCurrencySymbols(@NotNull List<CryptoCurrencyEntry> digitalCurrencySymbolsArray,
-                                                   String fiatCurrencySymbol) throws InterruptedException {
+    public List<ServiceResponseEntry>
+    requestRestInterfaceActualValueCurrencySymbols(List<CryptoCurrencyEntry> digitalCurrencySymbolsArray,
+                                                   String fiatCurrencySymbol) throws InterruptedException, MalformedURLException {
         return httpClient.requestRestInterfaceActualValueCurrencySymbols(digitalCurrencySymbolsArray,
                 fiatCurrencySymbol);
     }

@@ -35,10 +35,10 @@ import java.util.stream.Stream;
  */
 public class HttpWebClient implements Callable<String> {
 
-    String uri;
+    private URL url;
 
-    public HttpWebClient(String uri) {
-        this.uri = uri;
+    public HttpWebClient(String uri) throws MalformedURLException {
+        this.url = new URL(uri);
     }
 
     @Override
@@ -56,7 +56,6 @@ public class HttpWebClient implements Callable<String> {
      *
      */
     public String getRequestResponse(){
-        URL url;
         String response = "";
 
         try {
@@ -66,12 +65,12 @@ public class HttpWebClient implements Callable<String> {
             * Cookie        Set to match the one set on the browser when calling the Rest API (not strictly required)
             * @link         https://min-api.cryptocompare.com/documentation?key=Price&cat=SingleSymbolPriceEndpoint
             */
-            url = new URL(this.uri);
+
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
             con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36");
             con.setRequestProperty("Cookie", "__cfduid=d21121d3aed99cd5fab8102a417d3e18c1568407546; ");
-            response = HttpWebClient.getRawResponse(con, false); // false = no headers are appended to response
+            response = getRawResponse(con, false); // false = no headers are appended to response
 
         } catch (MalformedURLException | ProtocolException e) {
             e.printStackTrace();
@@ -82,7 +81,7 @@ public class HttpWebClient implements Callable<String> {
     }
 
 
-    public static String getRawResponse(HttpURLConnection con, Boolean includeHeaders) throws IOException {
+    public String getRawResponse(HttpURLConnection con, Boolean includeHeaders) throws IOException {
         StringBuilder responseBuilder = new StringBuilder();
 
         if(includeHeaders)
